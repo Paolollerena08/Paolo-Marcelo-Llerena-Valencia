@@ -1,67 +1,186 @@
-/* ----- ESTILOS GENERALES ----- */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #f4f4f8;
-  color: #222;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paolo – Hacker Terminal</title>
 
-/* ----- HEADER ----- */
-header {
-  background: #222831;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-}
+    <style>
+        @font-face {
+            font-family: "VT323";
+            src: url("https://fonts.gstatic.com/s/vt323/v17/pxiKyp0ihIEF2hsY.woff2") format("woff2");
+        }
 
-header h1 {
-  margin: 0;
-  font-size: 38px;
-}
+        body {
+            margin: 0;
+            background: #000000;
+            font-family: "VT323", monospace;
+            color: #00ff66;
+            font-size: 22px;
+            text-shadow: 0 0 8px #00ff66;
+            overflow-x: hidden;
+        }
 
-header p {
-  font-size: 18px;
-  opacity: 0.8;
-}
+        /* Efecto CRT */
+        .crt::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                rgba(0, 255, 0, 0.03) 0px,
+                rgba(0, 255, 0, 0.03) 2px,
+                rgba(0, 0, 0, 0.05) 3px
+            );
+        }
 
-/* ----- CONTENEDOR PRINCIPAL ----- */
-main {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
+        header {
+            padding: 25px;
+            text-align: center;
+            border-bottom: 3px solid #00ff66;
+            font-size: 28px;
+        }
 
-/* ----- TARJETAS DE SECCIÓN ----- */
-section {
-  background: white;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
-}
+        .perfil {
+            text-align: center;
+            padding: 30px;
+        }
 
-/* ----- FOTO ----- */
-#perfil img {
-  width: 160px;
-  height: 160px;
-  border-radius: 100%;
-  display: block;
-  margin: 0 auto 15px;
-  border: 4px solid #222831;
-}
+        .perfil img {
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 3px solid #00ff66;
+            box-shadow: 0 0 14px #00ff66;
+        }
 
-/* ----- TÍTULOS ----- */
-h2 {
-  text-align: center;
-  margin-top: 0;
-}
+        .box {
+            width: 85%;
+            max-width: 900px;
+            margin: auto;
+            background: #030303;
+            padding: 20px;
+            border: 2px solid #00ff66;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            box-shadow: 0 0 15px #00ff66;
+        }
 
-/* ----- FOOTER ----- */
-footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-  font-size: 14px;
-  color: #666;
-}
+        h2 {
+            font-size: 24px;
+            border-left: 4px solid #00ff66;
+            padding-left: 12px;
+        }
+
+        a {
+            color: #00ff66;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #55ff99;
+            text-shadow: 0 0 12px #55ff99;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #00ff66;
+            background: #0a0a0a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #00ff66;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body class="crt">
+
+    <header>
+        [ ACCESS GRANTED ] — PORTAFOLIO DE PAOLO
+    </header>
+
+    <div class="perfil">
+        <img src="foto.jpg" alt="Foto Hacker">
+        <h1>Paolo Llerena</h1>
+        <p>Modo: HACKER_ACTIVADO</p>
+    </div>
+
+    <div class="box">
+        <h2>► Sobre mí</h2>
+        <p>
+            {Usuario: Paolo}  
+            {Rol: Estudiante / Hacker en Progreso}  
+            {Descripción: Me gusta la programación, la tecnología, la lógica y el estilo retro de terminal.}
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>► Cursos Registrados</h2>
+        <ul>
+            <li>MATEMÁTICA → 
+                <a href="https://www.linkedin.com/in/marco-antonio-cuentas-montenegro-57765a220/" target="_blank">
+                    Marco Cuentas
+                </a>
+            </li>
+
+            <li>PROGRAMACIÓN → 
+                <a href="https://www.linkedin.com/in/henry-huam%C3%A1n-navarro-964015108/" target="_blank">
+                    Henry Huamán
+                </a>
+            </li>
+
+            <li>ESTRUCTURAS DE DATOS → 
+                <a href="https://www.linkedin.com/in/ernesto-cuadros-v/" target="_blank">
+                    Ernesto Cuadros
+                </a>
+            </li>
+
+            <li>COMUNICACIÓN → 
+                <a href="https://www.linkedin.com/in/kelly-vizconde-la-motta-3a57a4143/" target="_blank">
+                    Kelly Vizconde
+                </a>
+            </li>
+
+            <li>FILOSOFÍA → 
+                <a href="https://www.linkedin.com/in/rpaccotacyay/" target="_blank">
+                    Rosa Paccotacya
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>► Compañeros</h2>
+        <p>Party loaded... (Puedes agregar nombres aquí).</p>
+    </div>
+
+    <div class="box">
+        <h2>► Contacto</h2>
+        <ul>
+            <li>Email → tu-email@ucsp.edu.pe</li>
+            <li>GitHub → <a href="#" target="_blank">tu_git</a></li>
+            <li>LinkedIn → <a href="#" target="_blank">tu_linkedin</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        © 2025 — SYSTEM ONLINE — ALL RIGHTS RESERVED
+    </footer>
+
+</body>
+</html>
