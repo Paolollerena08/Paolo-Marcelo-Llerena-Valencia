@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://paolollerena08.github.io/Paolo-Marcelo-Llerena-Valencia/sitemap.xml
